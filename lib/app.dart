@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/main_page.dart';
+import 'screens/splash_page.dart';
 import 'theme/app_theme.dart';
 import 'utils/constants.dart';
 
@@ -12,7 +12,7 @@ class NibLibraryApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       theme: AppTheme.light,
-      home: const MainPage(),
+      home: const SplashPage(),
     );
   }
 }

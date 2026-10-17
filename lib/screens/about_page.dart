@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../theme/app_colors.dart';
 import '../utils/constants.dart';
+import 'login_page.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -21,6 +22,14 @@ class AboutPage extends StatelessWidget {
         const SnackBar(content: Text('មិនអាចបើកតំណនេះបានទេ')),
       );
     }
+  }
+
+    void _logout(BuildContext context) {
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (_) => const LoginPage()),
+      (route) => false,
+    );
   }
 
   @override
@@ -69,6 +78,12 @@ class AboutPage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          const SizedBox(height: AppConstants.paddingM),
+          OutlinedButton.icon(
+            onPressed: () => _logout(context),
+            icon: const Icon(Icons.logout),
+            label: const Text('ចាកចេញ'),
           ),
           const SizedBox(height: AppConstants.paddingL),
           const Center(

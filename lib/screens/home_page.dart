@@ -3,13 +3,15 @@ import '../data/books_data.dart';
 import '../data/categories_data.dart';
 import '../models/book.dart';
 import '../utils/constants.dart';
+import '../widgets/app_drawer.dart';
 import '../widgets/book_card.dart';
 import '../widgets/empty_state.dart';
 import 'book_detail_page.dart';
 
-
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final ValueChanged<int> onSelectTab;
+
+  const HomePage({super.key, required this.onSelectTab});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -39,17 +41,13 @@ class _HomePageState extends State<HomePage> {
     setState(() {});
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     final results = _filteredBooks;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(AppConstants.appNameKh)
-      ),
-
+      appBar: AppBar(title: const Text(AppConstants.appName)),
+      drawer: AppDrawer(onSelectTab: widget.onSelectTab),
       body: Column(
         children: [
           _buildSearchBox(),

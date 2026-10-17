@@ -14,12 +14,18 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = const [
-    HomePage(),
-    CategoriesPage(),
-    MyBooksPage(),
-    AboutPage(),
+  late final List<Widget> _pages = [
+    HomePage(onSelectTab: _selectTab),
+    const CategoriesPage(),
+    const MyBooksPage(),
+    const AboutPage(),
   ];
+
+  void _selectTab(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +33,7 @@ class _MainPageState extends State<MainPage> {
       body: _pages[_currentIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
-        onDestinationSelected: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+        onDestinationSelected: _selectTab,
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
