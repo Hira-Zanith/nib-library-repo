@@ -1,0 +1,68 @@
+import '../models/book.dart';
+
+final List<Book> books = [
+  Book(
+    id: 1,
+    title: 'Clean Code',
+    author: 'Robert C. Martin',
+    category: 'Technology',
+    description: 'សៀវភៅអំពីរបៀបសរសេរកូដឱ្យស្អាត និងងាយអាន។',
+    year: 2008,
+  ),
+  Book(
+    id: 2,
+    title: 'The Pragmatic Programmer',
+    author: 'Andrew Hunt, David Thomas',
+    category: 'Technology',
+    description: 'គន្លឹះអនុវត្តជាក់ស្តែងសម្រាប់អ្នកសរសេរកម្មវិធី។',
+    year: 1999,
+  ),
+  Book(
+    id: 3,
+    title: 'Principles of Marketing',
+    author: 'Philip Kotler',
+    category: 'Business',
+    description: 'មូលដ្ឋានគ្រឹះនៃទីផ្សារ សម្រាប់និស្សិតអាជីវកម្ម។',
+    year: 2017,
+  ),
+  Book(
+    id: 4,
+    title: 'The Lean Startup',
+    author: 'Eric Ries',
+    category: 'Business',
+    description: 'វិធីបង្កើតអាជីវកម្មថ្មីដោយសាកល្បងលឿន និងចំណាយតិច។',
+    year: 2011,
+  ),
+  Book(
+    id: 5,
+    title: 'Rich Dad Poor Dad',
+    author: 'Robert Kiyosaki',
+    category: 'Finance',
+    description: 'មេរៀនអំពីប្រាក់ និងការគ្រប់គ្រងហិរញ្ញវត្ថុ។',
+    year: 1997,
+  ),
+  Book(
+    id: 6,
+    title: 'Good to Great',
+    author: 'Jim Collins',
+    category: 'Management',
+    description: 'ហេតុអ្វីក្រុមហ៊ុនខ្លះរីកចម្រើនលើសក្រុមហ៊ុនដទៃ។',
+    year: 2001,
+  ),
+  Book(
+    id: 7,
+    title: 'Atomic Habits',
+    author: 'James Clear',
+    category: 'Self-Help',
+    description: 'របៀបបង្កើតទម្លាប់ល្អតាមរយៈការផ្លាស់ប្តូរតូចៗ។',
+    year: 2018,
+  ),
+  Book(
+    id: 8,
+    title: 'Thinking, Fast and Slow',
+    author: 'Daniel Kahneman',
+    category: 'Self-Help',
+    description: 'របៀបដែលខួរក្បាលគិត និងសម្រេចចិត្ត។',
+    year: 2011,
+  ),
+];
